@@ -1,0 +1,22 @@
+{
+  "name": "intro-to-express",
+  "version": "1.0.0",
+  "description": "## Getting Started",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiguelCatala27/intro-to-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiguelCatala27/intro-to-express/issues"
+  },
+  "homepage": "https://github.com/MiguelCatala27/intro-to-express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
