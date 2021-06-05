@@ -27,3 +27,6 @@ app.get("/Gollum", (req, res) => {
 app.get("/Rocky", (req, res) => {
     res.send("Yo, Adrian")
 })
+app.get("/ric-flair", (req, res) => {
+    res.send("Whoooooooo")
+})
