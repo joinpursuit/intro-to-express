@@ -3,7 +3,7 @@ const magic8Responses = require("./magic8Responses")
 
 const app = express()
 
-const PORT = 3003
+const PORT = 5003
 
 
 
