@@ -30,3 +30,6 @@ app.get("/Rocky", (req, res) => {
 app.get("/ric-flair", (req, res) => {
     res.send("Whoooooooo")
 })
+app.get("/james-bond", (req, res) => {
+    res.send("the name is Bond, James Bond")
+})
