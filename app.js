@@ -6,6 +6,9 @@ app.listen(PORT, () => { console.log("listening on PORT: ", PORT)});
 app.get("/terminator", (req, res) => {
     res.send("I'll be back")
 })
-app.get("/Emril", (req, res) => {
+app.get("/Emeril", (req, res) => {
     res.send("Bam!")
+})
+app.get("/Tony-Montana", (req, res) => {
+    res.send("Say hello to my little friend")
 })
