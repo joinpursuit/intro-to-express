@@ -33,3 +33,6 @@ app.get("/ric-flair", (req, res) => {
 app.get("/james-bond", (req, res) => {
     res.send("the name is Bond, James Bond")
 })
+app.get("/Regis", (req, res) => {
+    res.send("Is that your final answer?")
+})
