@@ -1,0 +1,22 @@
+{
+  "name": "intro-to-express",
+  "version": "1.0.0",
+  "description": "express lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenia-r/intro-to-express.git"
+  },
+  "author": "kenia rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenia-r/intro-to-express/issues"
+  },
+  "homepage": "https://github.com/kenia-r/intro-to-express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
