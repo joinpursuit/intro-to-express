@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const PORT = 3002;
 const magic8Responses = [
   "It is certain",
   "It is decidedly so",
@@ -27,7 +26,19 @@ const magic8answer =
 
 app.get("/", (request, response) => {
   response.send(
-    "i love these characters, type a forward slash followed by a name in the URL"
+    `<h1>i love these characters, type a forward slash followed by one of the names bellow in the URL</h1>
+    <ul>
+    <li>fox mulder</li>
+    <li>batman</li>
+    <li>gollum</li>
+    <li>terminator</li>
+    <li>Homer Simpson</li>
+    <li>Tony Montana</li>
+    <li>dorothy</li>
+    <li>frankenstein</li>
+    <li>Rocky</li>
+    </ul>
+    <h2>type in magic8 to get a prediction</h2>`
   );
 });
 
@@ -71,6 +82,4 @@ app.get("/magic8", (request, response) => {
   response.send(`<h1>${magic8answer}</h1>`); //need a little help with this one
 });
 
-app.listen(PORT, () => {
-  console.log("listening on port: ", PORT);
-});
+module.exports = app
