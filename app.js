@@ -24,7 +24,6 @@ const characters = {
 
 app.get("/characters/:name", (req, res) => {
   const {name} = req.params;
-console.log(name.toUpperCase())
   if (characters[name]) {
     res.send(characters[name]);
   } else {
@@ -55,7 +54,7 @@ const fortunes = [
 ];
 
 app.get("/magic8", (req, res) => {
-  let randomFortune = Math.floor(Math.random() * fortunes.length);
+  let randomFortune = Math.floor(Math.random() * (fortunes.length-1));
 
   res.send(`<h1>${fortunes[randomFortune]}</h1>`);
 });
