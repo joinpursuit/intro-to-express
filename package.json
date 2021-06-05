@@ -1,0 +1,25 @@
+{
+  "name": "intro-to-express",
+  "version": "1.0.0",
+  "description": "## Getting Started",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SDAR30/intro-to-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SDAR30/intro-to-express/issues"
+  },
+  "homepage": "https://github.com/SDAR30/intro-to-express#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^27.0.4",
+    "nodeman": "^1.1.2",
+    "supertest": "^6.1.3"
+  }
+}
