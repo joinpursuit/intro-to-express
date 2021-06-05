@@ -12,3 +12,6 @@ app.get("/Emeril", (req, res) => {
 app.get("/Tony-Montana", (req, res) => {
     res.send("Say hello to my little friend")
 })
+app.get("/Homer-Simpson", (req, res) => {
+    res.send(`D'Oh`)
+})
