@@ -18,3 +18,6 @@ app.get("/Homer-Simpson", (req, res) => {
 app.get("/JJ-Evans", (req, res) => {
     res.send("Dy-no-myte!")
 })
+app.get("/Frankenstein", (req, res) => {
+    res.send("It's alive! It's alive")
+})
