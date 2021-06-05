@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jordanbobadilla/intro-to-express.git"
+    "url": "git+https://github.com/JeffreySebastian-Pursuit/intro-to-express.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jordanbobadilla/intro-to-express/issues"
+    "url": "https://github.com/JeffreySebastian-Pursuit/intro-to-express/issues"
   },
-  "homepage": "https://github.com/jordanbobadilla/intro-to-express#readme",
+  "homepage": "https://github.com/JeffreySebastian-Pursuit/intro-to-express#readme",
   "dependencies": {
     "express": "^4.17.1"
   }
