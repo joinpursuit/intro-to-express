@@ -1,8 +1,12 @@
 const express = require('express')
+const magic8Responses = require("./magic8Responses")
 
 const app = express()
 
 const PORT = 3003
+
+
+
 
 app.listen(PORT, () => {
     console.log('Listening on PORT ', PORT)
@@ -44,3 +48,7 @@ app.get('/gollum', (req, res) => {
     app.send('My precious')
 })
 
+app.get("/magic8", (req, res) => {
+    const magic8Quote = magic8Responses[Math.floor(Math.random() * magic8Responses.length)]
+    res.send(`<h1>${magic8Quote}</h1>`)
+})
