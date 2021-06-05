@@ -22,7 +22,7 @@ app.get("/jeff", (request, response) => {
   response.send("My name is jeff!!!");
 });
 
-app.get("/Zeus", (request, response) => {
+app.get("/zeus", (request, response) => {
   response.send("Release the Kraken");
 });
 app.get("/travisbickle", (request, response) => {
