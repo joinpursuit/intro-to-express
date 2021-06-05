@@ -21,3 +21,6 @@ app.get("/JJ-Evans", (req, res) => {
 app.get("/Frankenstein", (req, res) => {
     res.send("It's alive! It's alive")
 })
+app.get("/Gollum", (req, res) => {
+    res.send("My precious")
+})
