@@ -72,8 +72,7 @@ app.get("/magic8", (request, response) => {
     magic8Responses[Math.floor(Math.random() * magic8Responses.length)];
   response.send(`<h1>${magic8Answer}</h1>`);
   console.log(request);
-  });
-
+});
 
 app.listen(3003);
 
