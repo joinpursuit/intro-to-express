@@ -1,18 +1,25 @@
 const express = require("express")
 
 const app = express()
+const PORT = 3003
+
+app.get("/", (req, res) => {
+    res.status(200).send("Hello world")
+})
+
+
 
 app.get("/terminator", (request, response) => {
-    response.send("I'll be back")
+    response.status(200).send("I'll be back")
     response.send('Hasta la vista, baby')
 })
 
 app.get("/timgunn", (req, res) => {
-    res.send('Make it work')
+    res.status(200).send('Make it work')
 })
 
 app.get('/hello', (req, res) => {
-    res.send("Here\'s looking at you, kid")
+    res.status(200).send("Here\'s looking at you, kid")
 })
 
 app.get('/emeril', (req, res) => {
@@ -87,4 +94,9 @@ let randomResponse = magic8Responses[random]
 res.send(`<h1>${randomResponse}</h1>`)
 })
 
-app.listen(3001)
+app.listen(PORT, () => {
+    console.log(`listening on port ${PORT}`)
+})
+
+
+module.exports = app
