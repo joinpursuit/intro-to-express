@@ -1,0 +1,25 @@
+{
+  "name": "intro-to-express",
+  "version": "1.0.0",
+  "description": "## Getting Started",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teyannaearle/intro-to-express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teyannaearle/intro-to-express/issues"
+  },
+  "homepage": "https://github.com/teyannaearle/intro-to-express#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^27.0.4",
+    "supertest": "^6.1.3"
+  }
+}
