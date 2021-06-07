@@ -1,6 +1,5 @@
 const express = require("express")
 const app = express()
-// const PORT = 3003
 
 app.get("/", (request, response) => {
     response.send("Hello, world!")
@@ -12,7 +11,6 @@ app.get("/uni", (request, response) => {
 
 app.get("/terminator", (request, response) => {
     response.send("I'll be back")
-    // response.send('Hasta la vista, baby')
 })
 
 app.get('/tim%20gunn', (request, response) => {
@@ -76,10 +74,5 @@ const magic8Responses = [
   app.get("/magic8" , (request, response) => {
       response.send(`<h1> ${magic8Responses[Math.floor(Math.random()*19)]} </h1>`)
   })
-
-
-//   app.listen(PORT, ()=> {
-//     console.log(`listening on port ${PORT}`)
-// })
 
 module.exports = app
