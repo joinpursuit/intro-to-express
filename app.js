@@ -76,20 +76,8 @@ app.get("/jim-lovell", (request,response)=> {
 })
 
 app.get("/magic8", (request,response) => {
-    let res = Math.random(Math.floor(magic8Responses))
+    let res = magic8Responses[Math.floor(Math.random() * magic8Responses.length)]
     response.send(`<h1>${res}</h1>`)
 })
 
-
-
-
-
 app.listen(3003)
-
-
-
-
-
-
-// let randomWord = magic8Responses[Math.floor(Math.random()*magic8Responses.length)]
-//     response.send(`<h1>${randomWord}</h1>`)
