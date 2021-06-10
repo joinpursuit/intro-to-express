@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 
+app.get("/", (request, response) => {
+  response.status(200).send("Hello, world!");
+});
+
 app.get("/terminator", (request, response) => {
   response.send("I'll be back");
 });
@@ -75,6 +79,8 @@ app.get("/magic8", (request, response) => {
 });
 
 app.listen(3003);
+
+module.exports = app;
 
 // What happens if you try to create a URL /Steve McGarrett?
 // We get "Cannot GET /steve%20McGarrett"
