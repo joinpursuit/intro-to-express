@@ -3,8 +3,6 @@ const app = express();
 
 app.get("/terminator", (repueste, response) => {
      response.send("I'll be back")
-    //  response.send('Hasta la vista, baby')
-     
     })
     
 app.get("/Emeril", (repueste, response) => {
@@ -76,3 +74,14 @@ app.listen(3003)
 
 
 
+//Notes:
+// What happens if you try to create a URL /Steve McGarrett?
+// We get "Cannot GET /steve%20McGarrett"
+// Is there a difference between /stevemcgarrett and SteveMcGarrett?
+// No difference loads the same comment
+// Is there a difference between Steve/McGarrett?
+// You have to add the / between or else you will get Cannot GET /SteveMcGarrett
+// If you have a phrase like Here's looking at you, kid, how do you deal with the ' in Here's?
+// you either have to use "" or \\ before and after the ' if using ''
+// What do you see in your browser?
+// We see the first message of (I'll be Back!)
