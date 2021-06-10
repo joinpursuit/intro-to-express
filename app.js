@@ -72,5 +72,5 @@ const magic8Responses = [
   ]
 
   app.get("/magic8", (request, response) => {
-      response.send(`${magic8Responses[Math.floor(Math.random() * 19)]}`)
+      response.send(`<h1>${magic8Responses[Math.floor(Math.random() * 19)]}</h1>`)
   })
