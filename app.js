@@ -1,37 +1,20 @@
 const express = require("express");
 const app = express();
 const PORT = 3003;
-
-const magic8Responses = [
-  "It is certain",
-  "It is decidedly so",
-  "Without a doubt",
-  "Yes - Definitely",
-  "You may rely on it",
-  "As I see it, yes",
-  "Most likely",
-  "Outlook good",
-  "Yes, and signs point to yes",
-  "Reply hazy, try again",
-  "Ask again later",
-  "Better not tell you now",
-  "Cannot predict now",
-  "Concentrate and ask again",
-  "Don't count on it",
-  "My reply is no",
-  "My sources say no",
-  "Outlook not so good",
-  "Very doubtful",
-];
+const magic8Responses = require("./magic8Responses");
 
 // route
 app.get("/", (request, response) => {
   response.send("Hello World");
 });
 
+app.listen(PORT, () => {
+  console.log("Listening on PORT: ", PORT);
+});
+
 app.get("/emeril", (req, res) => {
   res.send("Bam!");
-  // res.send("Let's cook")
+  res.send("Let's cook");
 });
 
 app.get("/batman", (req, res) => {
@@ -65,24 +48,11 @@ app.get("/homer-simpson", (req, res) => {
 
 app.get("/james-bond", (req, res) => {
   res.send("the name is Bond, James Bond");
-});
-
-app.listen(PORT, () => {
-  console.log("Listening on PORT: ", PORT);
-});
-
-////////////// Magic 8 Ball ///////////
-
-//   app.get("/magic8", (req, res) => {
-//     const random = Math.floor(Math.random() * (magic8Responses.length -1))
-//     console.log(random)
-//     res.send(magic8Responses[random])
-// } )
+})
 
 app.get("/magic8", (req, res) => {
-  const random =
-    magic8Responses[Math.floor(Math.random() * (magic8Responses.length - 1))];
+  const random = Math.floor(Math.random() * (magic8Responses.length - 1));
   res.send(`<h1>
-        ${random}
+        ${magic8Responses[random]}
     </h1>`);
 });
