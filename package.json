@@ -1,23 +1,24 @@
 {
   "name": "intro-to-express",
   "version": "1.0.0",
-  "description": "## Getting Started",
-  "main": "app.js",
+  "description": "express lab",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/floweraviles/intro-to-express.git"
+    "url": "git+https://github.com/kenia-r/intro-to-express.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "kenia rodriguez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/floweraviles/intro-to-express/issues"
+    "url": "https://github.com/kenia-r/intro-to-express/issues"
   },
-  "homepage": "https://github.com/floweraviles/intro-to-express#readme",
+  "homepage": "https://github.com/kenia-r/intro-to-express#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "jest": "^27.0.4",
+    "supertest": "^6.1.3"
   }
 }
