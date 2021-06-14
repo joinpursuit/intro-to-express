@@ -9,10 +9,6 @@ app.get('/terminator', (req, res) => {
     const hasta = 'hasta la vista baby'
     res.send(`${back}\\ ${hasta}`)
 })
-// app.get('/terminator/2', (req, res)=> {
-//     res.send(`hasta la vista baby`)
-// })
-
 
 app.get('/simpons', (req, res)=> {
     res.send(`doh!`)
@@ -38,7 +34,6 @@ app.get('/travis-bickle', (req, res)=> {
 app.get('/borg', (req, res)=> {
     res.send(`Resistance is futile`)
 })
-
 
 app.get('/magic8', (req, res) => {
     const magic8Responses = [
