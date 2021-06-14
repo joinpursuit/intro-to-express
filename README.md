@@ -12,7 +12,7 @@ There are no tests for this assignment. The bonus is to write your own tests. Yo
   - follow the prompts and confirm settings (this is just practice so it's ok to not provide much information/make a mistake/keep it simple)
 - `npm install express`
 
-
+initial github post
 <details><summary>Success!</summary>
 
 ![Basic Package JSON](./assets/basic-package-json-w-express.png)
