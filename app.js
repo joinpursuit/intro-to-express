@@ -19,51 +19,55 @@ const PORT = 3003;
 // - response
 //The response obj has a bunch of methods for sending a response back to the client.
 app.get('/', (request, response) =>{
-response.send('Hi Jalamang J!')
-
+response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">Hi Jalamang J!</h1>')
 })
 
+// const style = {
+//   style: "font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;"
+// };
+
 app.get('/Terminator', (request, response) => {
-    response.send("I\'ll be back!\nHasta la vista, baby")
-
+    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">I\'ll be back!</h1>')
   })
-app.get('/Terminator2', (request, response) => {
-    response.send("Hasta la vista, baby")
 
+app.get('/Terminator2', (request, response) => {
+    response.send("<h1 style='font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;'>Hasta la vista, baby</h1>")
   })
 
 app.get('/Homer-Simpson', (request, response) => {
-    response.send("D'Oh")
+    response.send("<h1 style='font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;'>D'Oh</h1>")
   })
 
 app.get('/JJ-Evans', (request, response) => {
-    response.send("Dy-no-myte!")
+    response.send("<h1 style='font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;'>Dy-no-myte!</h1>")
   })
   
 app.get('/Batman', (request, response) => {
-    response.send("To the Batmobile!")
+    response.send("<h1 style='font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;'>To the Batmobile!</h1>")
   })
 
 app.get('/Hannibal-Smith', (request, response) => {
-    response.send("I love it when a plan comes together")
+    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">I love it when a plan comes together</h1>')
   })
 
 app.get('/Jack-Dawson', (request, response) => {
-    response.send("I'm king of the world!")
+    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">I\'m king of the world!</h1>')
   })
 
 app.get('/Frankenstein', (request, response) => {
-    response.send("It's alive! It's alive")
+    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">It\'s alive! It\'s alive</h1>')
   })
+
 app.get('/Tony-Montana', (request, response) => {
-    response.send("Say hello to my little friend")
+    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">Say hello to my little friend</h1>')
   })
+
 app.get('/Dorothy', (request, response) => {
-    response.send("Toto, I've got a feeling we're not in Kansas anymore")
+    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">Toto, I\'ve got a feeling we\'re not in Kansas anymore</h1>')
   })
 
 app.get('/Rod-Tidwell', (request, response) => {
-    response.send("Show me the money!")
+    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">Show me the money!</h1>')
   })
 
   const magic8Responses = [
@@ -89,13 +93,19 @@ app.get('/Rod-Tidwell', (request, response) => {
   
   ]
   let catchPhrase = ''
-
+  let result = ''
 
 app.get('/magic8', (request, response) => {
     for (let i = 0; i < magic8Responses.length; i++){
    catchPhrase = magic8Responses[Math.floor(Math.random() * magic8Responses.length)]
     }
-    response.send(catchPhrase)
+  if((Math.floor(Math.random() * magic8Responses.length) % 2 === 1)){
+    result = `<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">${catchPhrase}</h1>`
+  } else {
+    result = `<h1 style="font-style: italic; color: #c467; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">${catchPhrase}</h1>`
+  }
+  
+  response.send(result)
   })
 
 //A basically required method to use on your server. 
@@ -107,7 +117,7 @@ app.listen(PORT, () =>{
     console.log(`Listening on port: ${PORT}`)
 })
 
-
-
+// EXPORT
+module.exports = app
 
 
