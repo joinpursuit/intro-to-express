@@ -1,33 +1,3 @@
-// //"type": "module"
-// import express from "express";
-
-// /**
-//  * "express" is a actually a function and it 
-//  * returns an object with which we can use to 
-//  * manage a server.
-//  */
-// const app = express();
-
-// //This is the port we'll use
-// const port = 3003;
-
-// app.get("/", (request, response)=> {
-//  response.send('Hiiiii there')
-// })
-// app.get("/", (request, response)=> {
-//  response.send('Hiiiii there')
-// })
-// app.get("/", (request, response)=> {
-//  response.send('Hiiiii there')
-// })
-// app.get("/", (request, response)=> {
-//  response.send('Hiiiii there')
-// })
-
-// app.listen(port, ()=> {
-//     console.log(`Listening on port: ${port}`)
-// })
-
 import express from 'express'
 
 const magic8Responses = [
@@ -55,34 +25,42 @@ const magic8Responses = [
 
 const app = express()
 
+
 const port = 3003
 
-app.get('/Emeril', (request, response) => {
-    response.send("Bam!")
-})
+const quotes = {
+"/emeril": "Bam!",
+"/steve-mcgarrett": "Book 'em Danno!",
+"/coach-taylor": "Clear eyes, full hearts, can't Lose",
+"/homer-simpson": "D'Oh",
+"/bruce-banner": "Don't make me angry",
+"/jj-evans": "Dy-no-myte!",
+"/batman": "To the Batmobile!",
+"/hannibal-smith": "I love it when a plan comes together",
+"/fraiser": "I'm listening",
+"/regis": "Is that your final answer?",
+"/borg": "Resistance is futile",
+"/fox-mulder": "The truth is out there",
+"/harry-callahan": "Go ahead, make my day",
+"/travis-bickle": "You talkin' to me?",
+"/tony-montana": "Say hello to my little friend",
+"/zeus": "Release the Kraken",
+"/james-bond": "the name is Bond, James Bond",
+"/dorothy": "Toto, I've got a feeling we're not in Kansas anymore",
+"/rod-tidwell": "Show me the money!",
+"/frankenstein": "It's alive! It's alive",
+"/jim-lovell": "Houston, we have a problem",
+"/rocky": "Yo, Adrian",
+"/gollum": "My precious",
+"/jack-dawson": "I'm king of the world!"
+}
 
-app.get('/steve-mcGarrett', (request, response) => {
-    response.send("Book 'em Danno!")
-})
-
-app.get('/coach-taylor', (request, response) => {
-    response.send("Clear eyes, full hearts, can't Lose")
-})
-
-app.get('/homer-simpson', (request, response) => {
-    response.send("D'Oh")
-})
-
-app.get('/bruce-banner', (request, response) => {
-    response.send("Don't make me angry")
-})
-
-app.get('/bruce-banner2', (request, response) => {
-    response.send("Hulk Smash")
+app.get('*', (request, response) => {
+    console.log(request.originalUrl)
+    response.send(quotes[request.originalUrl.toLowerCase()])
 })
 
 app.get('/magic8', (request, response) =>{
-
 
   const message = magic8Responses[Math.floor(Math.random() * magic8Responses.length)]
 
