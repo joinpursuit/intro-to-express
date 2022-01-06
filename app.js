@@ -33,3 +33,8 @@ app.get("/steve-mcgarret", (request, response) => {
 app.get("/coach-taylor", (request, response) => {
     response.send("Clear eyes, full hearts, can't Lose")
 })
+
+// Homer Simpson - D'Oh
+app.get("/homer-simpson", (response, request) => {
+    response.send("D'oh")
+})
