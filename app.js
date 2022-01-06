@@ -43,6 +43,38 @@ app.get("/rod-tidwell", (request, response) => {
     response.send("Show me the money!")
 });
 
+const magic8Responses = [
+    "It is certain",
+    "It is decidedly so",
+    "Without a doubt",
+    "Yes - Definitely",
+    "You may rely on it",
+    "As I see it, yes",
+    "Most likely",
+    "Outlook good",
+    "Yes, and signs point to yes",
+    "Reply hazy, try again",
+    "Ask again later",
+    "Better not tell you now",
+    "Cannot predict now",
+    "Concentrate and ask again",
+    "Don't count on it",
+    "My reply is no",
+    "My sources say no",
+    "Outlook not so good",
+    "Very doubtful"
+  
+  ]
+  let catchPhrase = ''
+
+
+app.get('/magic8', (request, response) => {
+    for (let i = 0; i < magic8Responses.length; i++) {
+        catchPhrase = magic8Responses[Math.floor(Math.random() * magic8Responses.length)]
+    }
+    response.send(catchPhrase)
+  })
+
 app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`)
 })
