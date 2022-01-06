@@ -33,8 +33,7 @@ const magic8Responses = [
   ]
 
   const getResponses = () => {
-    let randomPhrase = magic8Responses[Math.floor(Math.random()*magic8Responses.length)];
-    return randomPhrase;
+      return magic8Responses[Math.floor(Math.random()*magic8Responses.length)];
       }
 
 app.get("/magic8", (req, res) =>{
