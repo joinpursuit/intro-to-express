@@ -36,12 +36,12 @@ app.get("/coach-taylor", (request, response) => {
 })
 
 // Homer Simpson - D'Oh
-app.get("/homer-simpson", (response, request) => {
+app.get("/homer-simpson", (request, response) => {
     response.send("D'oh")
 })
 
 // Bruce Banner - Don't make me angry
-app.get("/bruce-banner", (response, request) => {
+app.get("/bruce-banner", (request, response) => {
     response.send("Don't make me angry")
 })
 
