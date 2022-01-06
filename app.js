@@ -117,9 +117,9 @@ app.get('/magic8', (request, response)=>{
         "Very doubtful"
       ]
 
-     const randomPhrase = magic8Responses[Math.floor(Math.random()*magic8Responses.length)];
+     const magic8Answer = magic8Responses[Math.floor(Math.random()*magic8Responses.length)];
 
-    response.send(randomPhrase);
+    response.send(`<h1>${magic8Answer}</h1>`);
 })
 
 // Listen
