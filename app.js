@@ -78,7 +78,9 @@ app.get("/magic8", (req, res) => {
         eightball = magic8Responses[num]
         return eightball;
       }
-    res.send(`${randomRes()}`)
+    res.send(`
+    <img src="https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/magic8ball/magic8ball.jpg" style="display: block; margin-top: 50px; margin-left:auto; margin-right:auto; justify-content:center"></img>
+    <h1 style="text-align:center; margin-top:10px;">${randomRes()}</h1>`)
 })
 
 app.listen(PORT, ()=> {

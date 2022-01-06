@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/CharlieMoran/intro-to-express#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "jest": "^27.4.7",
+    "supertest": "^6.1.6"
   }
 }
