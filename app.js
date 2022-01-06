@@ -28,3 +28,8 @@ app.get("/emril", (request, response) => {
 app.get("/steve-mcgarret", (request, response) => {
     response.send("Book 'em Danno!")
 })
+
+// Coach Taylor - Clear eyes, full hearts, can't Lose
+app.get("/coach-taylor", (request, response) => {
+    response.send("Clear eyes, full hearts, can't Lose")
+})
