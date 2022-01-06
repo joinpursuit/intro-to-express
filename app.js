@@ -1,6 +1,6 @@
-const { response } = require("express")
 const express = require("express")
 let app = express()
+const PORT = 3003
 
 
 
@@ -26,6 +26,10 @@ const magic8Responses = [
     "Very doubtful"
   
   ]
+
+app.get('/', (request, response) => {
+    response.status(418).send("Hello, World!")
+})  
 
 app.get("/terminator", (request, response)=>{
     response.send("I'll be back.")
@@ -68,4 +72,8 @@ app.get("/magic8", (req, res)=>{
     res.send(`<h1>${answer}</h1>`)
 })
 
-app.listen(3003)
+app.listen(PORT, ()=>{
+    console.log(`listening on port ${PORT}`)
+})
+
+module.exports = app
