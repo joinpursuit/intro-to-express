@@ -19,7 +19,8 @@ const PORT = 3003;
 // - response
 //The response obj has a bunch of methods for sending a response back to the client.
 app.get('/', (request, response) =>{
-response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">Hi Jalamang J!</h1>')
+  // response.status(200).send('Hello, world!')
+  response.status(200).send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">Hi Jalamang J!</h1>')
 })
 
 // const style = {
@@ -27,47 +28,47 @@ response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute
 // };
 
 app.get('/Terminator', (request, response) => {
-    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">I\'ll be back!</h1>')
+    response.status(200).send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">I\'ll be back!</h1>')
   })
 
 app.get('/Terminator2', (request, response) => {
-    response.send("<h1 style='font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;'>Hasta la vista, baby</h1>")
+    response.status(200).send("<h1 style='font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;'>Hasta la vista, baby</h1>")
   })
 
 app.get('/Homer-Simpson', (request, response) => {
-    response.send("<h1 style='font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;'>D'Oh</h1>")
+    response.status(200).send("<h1 style='font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;'>D'Oh</h1>")
   })
 
 app.get('/JJ-Evans', (request, response) => {
-    response.send("<h1 style='font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;'>Dy-no-myte!</h1>")
+    response.status(200).send("<h1 style='font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;'>Dy-no-myte!</h1>")
   })
   
 app.get('/Batman', (request, response) => {
-    response.send("<h1 style='font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;'>To the Batmobile!</h1>")
+    response.status(200).send("<h1 style='font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;'>To the Batmobile!</h1>")
   })
 
 app.get('/Hannibal-Smith', (request, response) => {
-    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">I love it when a plan comes together</h1>')
+    response.status(200).send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">I love it when a plan comes together</h1>')
   })
 
 app.get('/Jack-Dawson', (request, response) => {
-    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">I\'m king of the world!</h1>')
+    response.status(200).send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">I\'m king of the world!</h1>')
   })
 
 app.get('/Frankenstein', (request, response) => {
-    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">It\'s alive! It\'s alive</h1>')
+    response.status(200).send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">It\'s alive! It\'s alive</h1>')
   })
 
 app.get('/Tony-Montana', (request, response) => {
-    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">Say hello to my little friend</h1>')
+    response.status(200).send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">Say hello to my little friend</h1>')
   })
 
 app.get('/Dorothy', (request, response) => {
-    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">Toto, I\'ve got a feeling we\'re not in Kansas anymore</h1>')
+    response.status(200).send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">Toto, I\'ve got a feeling we\'re not in Kansas anymore</h1>')
   })
 
 app.get('/Rod-Tidwell', (request, response) => {
-    response.send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">Show me the money!</h1>')
+    response.status(200).send('<h1 style="font-style: italic; color: #ff0066; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">Show me the money!</h1>')
   })
 
   const magic8Responses = [
@@ -105,17 +106,10 @@ app.get('/magic8', (request, response) => {
     result = `<h1 style="font-style: italic; color: #c467; position: absolute; top: 50%; left: 10%; width: 400px; height: 300px; margin-top: -150px;">${catchPhrase}</h1>`
   }
   
-  response.send(result)
+  response.status(200).send(result)
   })
 
-//A basically required method to use on your server. 
-//It lets you open up the server to requests. It takes teo arguments:
-// - a number for the port to listen to.
-// - a function to call back when the server is up and running
-//We typically run a console in the callback to let us know that it worked
-app.listen(PORT, () =>{
-    console.log(`Listening on port: ${PORT}`)
-})
+
 
 // EXPORT
 module.exports = app

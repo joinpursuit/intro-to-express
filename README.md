@@ -448,7 +448,7 @@ describe('Test the root path', () => {
 Next we want to `return` the `request` function and pass in `app`
 
 ```js
-
+****
 describe('Test the root path', () => {
   test('It should response the GET method', () => {
     return request(app)
