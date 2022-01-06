@@ -1,6 +1,5 @@
 const { res } = require("express")
 const express = require("express")
-
 const app = express()
 const PORT = 3003;
 
@@ -79,7 +78,7 @@ app.get("/magic8", (req, res) => {
         return eightball;
       }
     res.send(`
-    <img src="https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/magic8ball/magic8ball.jpg" style="display: block; margin-top: 50px; margin-left:auto; margin-right:auto; justify-content:center"></img>
+    <img src="https://i.postimg.cc/SsTkmM79/magic8ball.jpg" style="display: block; margin-top: 50px; margin-left:auto; margin-right:auto; justify-content:center"></img>
     <h1 style="text-align:center; margin-top:10px;">${randomRes()}</h1>`)
 })
 
