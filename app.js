@@ -18,3 +18,8 @@ app.listen(PORT, () => {
 app.get("/tim-gunn", (request, response) => {
     response.send("Make it work")
 })
+
+// Emeril - Bam!
+app.get("/emrill", (request, response) => {
+    response.send("Bam!")
+})
