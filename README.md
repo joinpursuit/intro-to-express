@@ -270,7 +270,7 @@ When it is a file we created, we must add the relative path to the file, based o
 
 #### Set up `package.json`
 
-We need to specify how to run the test. In `pakcage.json`, change the value of `test` inside the script object to be:
+We need to specify how to run the test. In `package.json`, change the value of `test` inside the script object to be:
 
 
 ```js
