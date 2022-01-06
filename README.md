@@ -265,7 +265,7 @@ We will need to `require` both `supertest` and our `app.js` files.
 When it is an `npm` package - then we `require` just the name of the `npm`
  package:  `const supertest = require('supertest')`
 
-When it is a file we created, we must add the relative path to the file, based on the current file. In this case, `app.js` is one director up from `tests` : `const app = require('../app.js')`
+When it is a file we created, we must add the relative path to the file, based on the current file. In this case, `app.js` is one directory up from `tests` : `const app = require('../app.js')`
 **tests/app.test.js**
 
 #### Set up `package.json`
