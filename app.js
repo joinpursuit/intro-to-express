@@ -8,7 +8,7 @@ const mango = require("express");
 const app = mango();
 
 // This is a GLOBAL CONSTANT
-const PORT = 3003;
+// const PORT = 3003;
 
 // The server object, "app", has several methods. One is .get. It handles GET requests. It takes 2 arguments: a STRING FOR THE ROUTE && a CALLBACK METHOD WHENEVER A REQUEST IS SENT
 app.get("/", (req, res)=> {
@@ -21,12 +21,12 @@ app.get('/tim-gunn', (req, res) => {
   })
 
   app.get('/Frasier', (req, res) => {
-    res.send('I\'m listening')
+    res.status(200).send('I\'m listening')
   })
 
   app.get('/terminator', (req, res) => {
     // res.send('I\ll be back')
-    res.send('Hasta la vista, baby')
+    res.status(200).send('Hasta la vista, baby')
   })
 
 
@@ -58,8 +58,10 @@ const magic8Responses = [
   })
 
 // Start taking requests. .listen takes 2 arguments: a NUMBER FOR THE PORT TO LISTEN ON && a FUNCTION TO CALL BACK WHEN THE SERVER IS UP AND RUNNING
-app.listen(PORT, () => {
-    // console log in callback to show that it works
-    console.log(`Listening on port: ${PORT}`)
+// app.listen(PORT, () => {
+//     // console log in callback to show that it works
+//     console.log(`Listening on port: ${PORT}`)
 
-})
+// })
+
+module.exports = app
