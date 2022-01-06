@@ -54,3 +54,8 @@ app.get("/jj-evans", (request, response) => {
 app.get("/batman", (request, response) => {
     response.send("To the Batmobile!")
 })
+
+// Hannibal Smith - I love it when a plan comes together
+app.get("/hannibal-smith", (request, response) => {
+    response.send("I love it when a plan comes together")
+})
