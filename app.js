@@ -1,3 +1,4 @@
+const { response } = require("express")
 const express = require("express")
 
 const app = express()
@@ -42,4 +43,9 @@ app.get("/homer-simpson", (response, request) => {
 // Bruce Banner - Don't make me angry
 app.get("/bruce-banner", (response, request) => {
     response.send("Don't make me angry")
+})
+
+// JJ Evans - Dy-no-myte!
+app.get("/jj-evans", (request, response) => {
+    response.send("Dy-no-myte!")
 })
