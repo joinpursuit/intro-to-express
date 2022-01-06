@@ -79,7 +79,8 @@ app.get("/magic8", (req, res) => {
       }
     res.send(`
     <img src="https://i.postimg.cc/SsTkmM79/magic8ball.jpg" style="display: block; margin-top: 50px; margin-left:auto; margin-right:auto; justify-content:center"></img>
-    <h1 style="text-align:center; margin-top:10px;">${randomRes()}</h1>`)
+    <h1 style="text-align:center; margin-top:10px;">${randomRes()}</h1>
+    <button onClick="window.location.reload();" style="display:block; margin-right:auto; margin-left:auto;">Try Again</button>`)
 })
 
 app.listen(PORT, ()=> {
