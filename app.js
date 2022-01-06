@@ -59,3 +59,8 @@ app.get("/batman", (request, response) => {
 app.get("/hannibal-smith", (request, response) => {
     response.send("I love it when a plan comes together")
 })
+
+// Fraiser - I'm listening
+app.get("/fraiser", (request, response) => {
+    response.send("I'm listening")
+})
