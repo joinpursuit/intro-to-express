@@ -64,3 +64,5 @@ app.get("/hannibal-smith", (request, response) => {
 app.get("/fraiser", (request, response) => {
     response.send("I'm listening")
 })
+
+// Activity Magic 8 Ball
