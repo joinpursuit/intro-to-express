@@ -20,6 +20,6 @@ app.get("/tim-gunn", (request, response) => {
 })
 
 // Emeril - Bam!
-app.get("/emrill", (request, response) => {
+app.get("/emril", (request, response) => {
     response.send("Bam!")
 })
