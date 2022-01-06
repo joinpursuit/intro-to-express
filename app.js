@@ -49,3 +49,8 @@ app.get("/bruce-banner", (response, request) => {
 app.get("/jj-evans", (request, response) => {
     response.send("Dy-no-myte!")
 })
+
+// Batman - To the Batmobile!
+app.get("/batman", (request, response) => {
+    response.send("To the Batmobile!")
+})
