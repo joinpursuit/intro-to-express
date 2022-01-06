@@ -38,3 +38,8 @@ app.get("/coach-taylor", (request, response) => {
 app.get("/homer-simpson", (response, request) => {
     response.send("D'oh")
 })
+
+// Bruce Banner - Don't make me angry
+app.get("/bruce-banner", (response, request) => {
+    response.send("Don't make me angry")
+})
