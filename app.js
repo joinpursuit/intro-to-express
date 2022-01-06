@@ -1,13 +1,38 @@
 const express = require("express");
+const res = require("express/lib/response");
 let app = express();
 
-app.get("/terminator", (req, res)=>{
+app.get("/terminator", (req, res) => {
     res.send("Hasta la vista, baby");
-})
+});
 
 app.get("/tim-gunn", (req, res) => {
     res.send("Make it work")
-})
+});
+
+app.get("/emeril", (req, res) => {
+    res.send("Bam!")
+});
+
+app.get("/steve-mcgarrett", (req, res) => {
+    res.send("Book 'em Danno!")
+});
+
+app.get("/coach-taylor", (req, res) => {
+    res.send("Clear eyes, full hearts, can't lose")
+});
+
+app.get("/homer-simpson", (req, res) => {
+    res.send("D'oh!")
+});
+
+app.get("/bruce-banner", (req, request) => {
+    res.send("Don't make me angry")
+});
+
+app.get("/tony-montana", (req, res) => {
+    res.send("Say hello to my little friend")
+});
 
 const magic8Responses = [
     "It is certain",
@@ -38,7 +63,7 @@ const magic8Responses = [
 
 app.get("/magic8", (req, res) =>{
 
-    res.send(getResponses());
+    res.send(`<h1>${getResponses()}</h1>`);
 })
 
 app.listen(3003);
