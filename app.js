@@ -23,3 +23,8 @@ app.get("/tim-gunn", (request, response) => {
 app.get("/emril", (request, response) => {
     response.send("Bam!")
 })
+
+// Steve McGarrett - Book 'em Danno!
+app.get("/steve-mcgarret", (request, response) => {
+    response.send("Book 'em Danno!")
+})
