@@ -1,4 +1,5 @@
 const express = require("express");
+const res = require("express/lib/response");
 let app = express();
 
 const magic8Responses = [
@@ -24,13 +25,32 @@ const magic8Responses = [
 ];
 
 app.get("/", (req, res) => {
-	res.status(500).send("Hi there !! ");
+	res.send("Hi there !! ");
 	console.log("hello to you too");
 });
-
 app.get("/terminator", (req, res) => {
 	res.send("I'll be back");
-	res.send("I'll be backkkkk");
+});
+app.get("/Emeril", (req, res) => {
+	res.send("Bam!");
+});
+app.get("/Batman", (req, res) => {
+	res.send("To the Batmobile!");
+});
+app.get("/Fraiser", (req, res) => {
+	res.send("I'm listening");
+});
+app.get("/Regis", (req, res) => {
+	res.send("is that your final answer?");
+});
+app.get("/Borg", (req, res) => {
+	res.send("Resistance us futile");
+});
+app.get("/tonymontana", (req, res) => {
+	res.send("say hellp to my little friend");
+});
+app.get("/Rocky", (req, res) => {
+	res.send("Yo, Adrian");
 });
 
 let rand = Math.floor(Math.random() * 19);
