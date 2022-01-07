@@ -1,11 +1,11 @@
 const express = require("express");
 
 const app = express();
-const PORT = 3003;
 
 app.get("/", (req, res) => {
-  res.send("<h1>Hello World!</h1>");
+  res.status(200).send("Hello, world!");
 });
+
 const magic8Responses = [
   "It is certain",
   "It is decidedly so",
@@ -29,15 +29,17 @@ const magic8Responses = [
 ];
 
 app.get("/magic", (req, res) => {
-  res.send(magic8Responses[Math.floor(Math.random() * magic8Responses.length)]);
-  //res.send("Hasta la vista, baby");
+  res.send(
+    `<h1>${
+      magic8Responses[Math.floor(Math.random() * magic8Responses.length)]
+    }</h1>`
+  );
 });
 
 app.get("/terminator", (req, res) => {
-  res.send();
+  res.send("I'll be back");
   //res.send("Hasta la vista, baby");
 });
 
-app.listen(PORT, () => {
-  console.log(`listening on port ${PORT}`);
-});
+// EXPORT
+module.exports = app;
