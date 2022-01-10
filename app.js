@@ -42,7 +42,6 @@ app.get("/tim/gunn", (request,response)=>{
 app.get("/magic8", (request, response)=>{
     const randomIndex = Math.floor(Math.random()* magic8Responses.length)
     console.log(`Random magic8 responses index ${randomIndex}`);
-    
     // response.send(`${magic8Responses[Math.floor(Math.random()* magic8Responses.length)]}`)
     response.send(`<h1>${magic8Responses[randomIndex]}<h1>`)
 })
