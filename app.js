@@ -40,15 +40,15 @@ app.get("/", (req, res) => {
   res.send("Pursuit intro to express lab!!");
 });
 app.get("/magic8", (req, res) => {
-  const ind = Math.floor(Math.random() * 20);
-  res.send(magic8Responses[ind]);
+  const ind = Math.floor(Math.random() * 19);
+  res.send(`<h1>${magic8Responses[ind]}</h1>`);
 });
-app.get("/people/:people_id", (req, res) => {
+app.get("/:people_id", (req, res) => {
   const id = req.params.people_id;
 
   res.send(people[id]);
 });
 
-app.listen(5000, () => {
-  console.log("Listening on port 5000...");
+app.listen(3003, () => {
+  console.log("Listening on port 3003...");
 });
