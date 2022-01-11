@@ -37,11 +37,11 @@ const magic8Responses = [
 ];
 
 app.get("/", (req, res) => {
-  res.send("Pursuit intro to express lab!!");
+  res.status(200).send("Pursuit intro to express lab!!");
 });
 app.get("/magic8", (req, res) => {
   const ind = Math.floor(Math.random() * 19);
-  res.send(`<h1>${magic8Responses[ind]}</h1>`);
+  res.status(200).send(`<h1>${magic8Responses[ind]}</h1>`);
 });
 app.get("/:people_id", (req, res) => {
   const id = req.params.people_id;
@@ -49,6 +49,4 @@ app.get("/:people_id", (req, res) => {
   res.send(people[id]);
 });
 
-app.listen(3003, () => {
-  console.log("Listening on port 3003...");
-});
+module.exports = app;
