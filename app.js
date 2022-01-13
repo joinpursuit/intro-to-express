@@ -73,7 +73,7 @@ app.get("/brickTop", (req, res) => {
 
 app.get("/magic8", (req, res) => {
   let magic8BallAns =
-    magic8Responses[(Math.random() * magic8Responses.length) | 0];
+    magic8Responses[Math.floor(Math.random() * magic8Responses.length)];
   res.send(`<h1>${magic8BallAns}</h1>`);
 });
 
