@@ -67,4 +67,12 @@ app.get("/magic8", (req, res) => {
   res.send(`<h1>${magic8Responses[i]}<h1>`);
 });
 
+app.get("/teapot", (req, res) => {
+  res
+    .status(418)
+    .send(
+      `<h1>418 I'm a teapot</h1>\n<p>This server refuses to brew coffee because it is, permanently, a teapot.</br>This resulting entity body is short and stout.</br>Tip me over and pour me out.</p>`
+    );
+});
+
 module.exports = app;
