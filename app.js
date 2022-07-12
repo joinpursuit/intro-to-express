@@ -67,6 +67,4 @@ app.get("/magic8", (req, res) => {
   res.send(`<h1>${magic8Responses[i]}<h1>`);
 });
 
-app.listen(3000, () => {
-  console.log("All systems go.");
-});
+module.exports = app;
