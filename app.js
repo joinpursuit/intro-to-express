@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/universe', (request, response) => {
-  response.send("It's so VAST!");
+  response.send("<h1>It's so VAST!</h1> <img src='https://www.nasa.gov/sites/default/files/thumbnails/image/main_image_deep_field_smacs0723-5mb.jpg' alt='vast'></img>");
 });
 
 app.get('/Rick', (req, res) => {
