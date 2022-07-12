@@ -27,7 +27,7 @@ const magic8Responses = [
 ];
 
 app.get('/', (req, res) => {
-  res.send( ' <h1>Hello Earthlings</h1>');
+  res.send( ' <h1 style="color:green;" >Hello Earthlings</h1>');
 });
 
 app.get('/universe', (request, response) => {
@@ -36,13 +36,13 @@ app.get('/universe', (request, response) => {
 
 app.get('/Rick', (req, res) => {
   res.send(
-    "<h2>Don't move. Gonorrhea can't see us if we don't move. Wait! I was wrong! I was thinking of a T. rex.</h2>",
+    '<h1 style="background-color:#2765c2;" >Don\'t move. Gonorrhea can\'t see us if we don\'t move. Wait! I was wrong! I was thinking of a T. rex.</h1>',
   );
 });
 
 app.get('/Morty', (req, res) => {
   res.send(
-    '<h2>Nobody exists on purpose. Nobody belongs anywhere. We’re all going to die. Come watch TV.</h2>',
+    '<h2 style="background-color:#f0e92b;" >Nobody exists on purpose. Nobody belongs anywhere. We’re all going to die. Come watch TV.</h2>',
   );
 });
 
@@ -56,21 +56,21 @@ app.get('/frankenstein', (req, res) => {
 
 app.get('/beth', (req, res) => {
   res.send(
-    "<h1>Honey, stop raising your father's cholesterol so you can take a hot funeral selfie.</h1>",
+    '<h1 style="background-color:#c22727;" >Honey, stop raising your father\'s cholesterol so you can take a hot funeral selfie.</h1>',
   );
 });
 
 app.get('/summer', (request, response) => {
-  response.send('<h1> So what if he’s the devil, Rick? At least the devil has a job. At least he’s active in the community</h1>');
+  response.send('<h1 style="background-color:#c957b1;"> So what if he’s the devil, Rick? At least the devil has a job. At least he’s active in the community</h1>');
 });
 
 app.get('/jerry', (req, res) => {
-  res.send("<h1>He's Playing You, Shorty!</h1>");
+  res.send('<h1 style="background-color:#61c957" >He\'s Playing You, Shorty!</h1>');
 });
 
 app.get('/magic8', (req, res) => {
   let magic8Answer = magic8Responses[Math.floor(Math.random() * 19)];
-  res.send(`<h1>${magic8Answer}</h1>`);
+  res.send(`<h1 style="color:#8e57c9" >${magic8Answer}</h1>`);
 });
 
 app.listen(port, () => {
