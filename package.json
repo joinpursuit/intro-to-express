@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "jest": "^28.1.2",
+    "nodemon": "^2.0.19",
+    "supertest": "^6.2.4"
+  },
+  "name": "intro-to-express",
+  "description": "## Getting Started",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joinpursuit/intro-to-express.git"
+  },
+  "author": "Candace Garvin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joinpursuit/intro-to-express/issues"
+  },
+  "homepage": "https://github.com/joinpursuit/intro-to-express#readme"
+}
