@@ -70,3 +70,8 @@ app.get('/magic8', (req, res) => {
 
 app.listen(3333)
 
+// ROUTES
+app.get('/', (request, response) => {
+    response.status(200).send('Hello, world!')
+})
+
