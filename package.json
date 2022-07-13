@@ -1,0 +1,25 @@
+{
+  "name": "intro-to-express2",
+  "version": "1.0.0",
+  "description": "## Getting Started",
+  "main": "app.js",
+  
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jorge-Carrera/intro-to-express2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jorge-Carrera/intro-to-express2/issues"
+  },
+  "homepage": "https://github.com/Jorge-Carrera/intro-to-express2#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "jest": "^28.1.2",
+    "supertest": "^6.2.4"
+  }
+}
