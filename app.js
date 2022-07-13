@@ -62,7 +62,7 @@ app.get('/mets', (req, res) => {
 });
 
 app.get('/magic8', (req, res) => {
-  let magic8Answer = magic8Responses[Math.floor(Math.random() * 19)];
+  let magic8Answer = magic8Responses[Math.floor(Math.random() * magic8Responses.length)];
   res.send(`<h1>${magic8Answer}</h1>`);
 });
 
