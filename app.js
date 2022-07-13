@@ -27,25 +27,47 @@ const magic8Responses = [
   "Very doubtful"
 ]
 
-// Helper func
+// Helper function
 function getIndex(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); 
 }
 
+function getCathpraseByMovie() {
+  let part1 = "terminator1", part2 = "terminator2";
+  if(movie === part1) {
+    return app.get('/terminator1', (req, res) => {
+      res.send('I\ll be back')
+    })
+  }
+  if(movie === part2) {
+    return app.get('/terminator2', (req, res) => {
+      res.send('Hasta la vista, baby')
+    })
+  }
+  
+}
+
 // Routes
-app.get('/', (request, response) => {
-  response.status(200).send('Hello, world!')
+app.get('/', (req, res) => {
+  res.status(200).send('Hello, world!')
 })
-// Custom routes
-app.get('/terminator', (req, res) => {
-  res.send('I\ll be back')
-  //res.send('Hasta la vista, baby')
+
+// Route with logic validating params
+app.get('/terminator:id', (req, res) => {
+  if (req.params.id === '1') {
+    res.send('I\ll be back') 
+  }
+  if (req.params.id === '2') {
+    res.send('Hasta la vista, baby')
+  }
 })
+
 app.get('/emeril', (req, res) => {
   res.send('Bam!')
 })
+
 app.get('/magic8', (req, res) => {
   res.send(`<h1>${magic8Responses[getIndex(0, magic8Responses.length-1)]}</h1>`)
 })
