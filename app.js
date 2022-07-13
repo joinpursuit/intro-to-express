@@ -11,68 +11,61 @@ const magic8Responses = [
   'As I see it, yes',
   'Most likely',
   'Outlook good',
+  'Yes, and signs point to yes',
   'Reply hazy, try again',
   'Ask again later',
   'Better not tell you now',
   'Cannot predict now',
-  'Comeback and Try again',
+  'Concentrate and ask again',
   "Don't count on it",
   'My reply is no',
-  'My sources say no, but they also said Pluto was a Planet',
+  'My sources say no',
   'Outlook not so good',
   'Very doubtful',
-  'Yes, But do it Drunk',
-  'Do What Jesus Would DO! Die at the age of 33',
-  'And Yes Trump uses me when deciding to go to war',
 ];
 
 app.get('/', (req, res) => {
-  res.send( `<h1 style="color:green;" >Hello Earthlings</h1>  <img src='https://media2.giphy.com/avatars/sanghyoundominichan/nFrbk5Jp1COV.gif' alt='aliens'></img>"`);
+  res.send('Hello nice World!');
 });
 
 app.get('/universe', (request, response) => {
-  response.send("<h1>It's so VAST!</h1> <img src='https://media2.giphy.com/avatars/sanghyoundominichan/nFrbk5Jp1COV.gif' alt='vast'></img>");
+  response.send('Hello universe!');
 });
 
-app.get('/Rick', (req, res) => {
-  res.send(
-    `<h1 style="background-color:#2765c2;" >Don\'t move. Gonorrhea can\'t see us if we don\'t move. Wait! I was wrong! I was thinking of a T. rex.</h1> <img src='https://media3.giphy.com/media/d95FpbwPrisjgL2lCR/giphy.gif' alt='rick'</img>`,
-  );
+app.get('/Regis', (req, res) => {
+  res.send('Is that your final answer?');
 });
 
-app.get('/Morty', (req, res) => {
-  res.send(
-    `<h2 style="background-color:#f0e92b;" >Nobody exists on purpose. Nobody belongs anywhere. We’re all going to die. Come watch TV.</h2> <img src='https://i.gifer.com/SIDZ.gif' alt='morty'</img>`,
-  );
+app.get('/Batman', (req, res) => {
+  res.send('To the batmobile!');
 });
 
-app.get('/nimbus', (req, res) => {
-  res.send(`<h2>Say goodbye to your precious dry land! For soon it will be wet!</h2> <br> <img src='https://media2.giphy.com/media/G49ZNK2Gp7ZtlIpjVh/200.gif' alt='nimbus'</img>"`);
+app.get('/james-bond', (req, res) => {
+  res.send('the name is Bond, James Bond');
 });
 
 app.get('/frankenstein', (req, res) => {
-  res.send("<h1 style='color:#132415;'> IT\'S ALIVE! Its Alive!!! <br> <img src='https://media1.giphy.com/media/l3vRlInF7QViJNOow/giphy.gif' alt='frank'</img>");
+  res.send('Its ALive! Its Alive!');
 });
 
-app.get('/beth', (req, res) => {
-  res.send(
-    "<h1 style='background-color:#c22727;' >Honey, stop raising your father\'s cholesterol so you can take a hot funeral selfie.</h1> <img src='https://media2.giphy.com/media/ZFnwQcep1z6qEdHDue/giphy.gif' alt='beth'</img> ",
-  );
+app.get('/rocky', (req, res) => {
+  res.send('Yo Adrian!');
 });
 
-app.get('/summer', (request, response) => {
-  response.send("<h1 style='background-color:#c957b1;'> So what if he\’s the devil, Rick? At least the devil has a job. At least he\’s active in the community</h1> <img src='https://64.media.tumblr.com/4b5031678461b823a7064995d41d1e96/tumblr_q0bahb4zkk1rawb5do1_400.gifv' alt='summer'</img> ");
+app.get('/terminator', (request, response) => {
+  response.send("I'll be back");
+  // response.send('Hasta la vista, baby');
 });
 
-app.get('/jerry', (req, res) => {
-  res.send("<h1 style='background-color:#61c957'>He\'s Playing You, Shorty! </h1> <img src='https://c.tenor.com/C--b2mPfzPgAAAAM/climate-change-is-real-lcvearthday.gif' alt='jerry'</img> ");
+app.get('/studioghibli', (req, res) => {
+  res.send('<img src = "http://s11.favim.com/orig/7/716/7160/71600/anime-flower-gif-ghibli-gif-spirited-away-gif-Favim.com-7160018.gif" alt = "Spirited Away"></img>');
 });
 
 app.get('/magic8', (req, res) => {
   let magic8Answer = magic8Responses[Math.floor(Math.random() * 19)];
-  res.send(`<h1 style="color:#8e57c9" >${magic8Answer}</h1> <img src='https://c.tenor.com/C--b2mPfzPgAAAAM/climate-change-is-real-lcvearthday.gif' alt='magic'</img>`);
+  res.send(`<h1>${magic8Answer}</h1>`);
 });
 
 app.listen(port, () => {
-  console.log('It\'s WORKING!');
+  console.log('It is Alive!');
 });
