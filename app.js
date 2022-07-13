@@ -3,9 +3,16 @@ require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT;
+
 app.get("/", (request, response) => {
-    response.send("Here we are Thierry and Jede!")
+    response.status(200).send("Hello from Jede!")
 });
+
+// app.get("/", (request, response) => {
+//     response.status(418).send("Hello from 418 test!")
+// });
+
+
 app.listen(3003, () => {
     console.log(`we are running ${PORT}`)
 });
@@ -72,3 +79,5 @@ app.get("/magic8", (request, response) => {
     const magic8Answer = magic8Responses[Math.floor(Math.random()*magic8Responses.length)]
     response.send(`<h1>${magic8Answer}</h1>`)
 });
+
+module.exports = app;
