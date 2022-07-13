@@ -141,6 +141,7 @@ Check terminal:
 </details>
 
 What does this error message mean?
+Multiple responses are connected to one specific route
 
 <details><summary>Hint/Reminder</summary>
 
