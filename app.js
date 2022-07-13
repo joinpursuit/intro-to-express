@@ -27,26 +27,16 @@ const magic8Responses = [
   "Very doubtful"
 ]
 
-// Helper function
+/**
+ * [getIndex() function generates a ramdom index between 0 and array length]
+ * @param  {[number]} min [min value equals to the first position]
+ * @param  {[number]} max [max value equals to the last position]
+ * @return {[number]}     [Number that represents a ramdon index]
+ */
 function getIndex(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); 
-}
-
-function getCathpraseByMovie() {
-  let part1 = "terminator1", part2 = "terminator2";
-  if(movie === part1) {
-    return app.get('/terminator1', (req, res) => {
-      res.send('I\ll be back')
-    })
-  }
-  if(movie === part2) {
-    return app.get('/terminator2', (req, res) => {
-      res.send('Hasta la vista, baby')
-    })
-  }
-  
 }
 
 // Routes
@@ -54,7 +44,7 @@ app.get('/', (req, res) => {
   res.status(200).send('Hello, world!')
 })
 
-// Route with logic validating params
+// Route validating params with logic
 app.get('/terminator:id', (req, res) => {
   if (req.params.id === '1') {
     res.send('I\ll be back') 
