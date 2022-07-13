@@ -35,9 +35,10 @@ function getIndex(min, max) {
 }
 
 // Routes
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.get('/', (request, response) => {
+  response.status(200).send('Hello, world!')
 })
+// Custom routes
 app.get('/terminator', (req, res) => {
   res.send('I\ll be back')
   //res.send('Hasta la vista, baby')
