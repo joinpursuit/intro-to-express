@@ -1,6 +1,10 @@
-const app = require("..app")
+// DEPENDENCIES
+const app = require('./app.js')
+
+// CONFIGURATION
 const PORT = 3003
-app.listen(PORT,() => {
-    
-    console.log(`Listen on port ${PORT} 8.4`)
-});
+
+// LISTEN
+app.listen(PORT, ()=> {
+    console.log(`listening on port ${PORT}`)
+})

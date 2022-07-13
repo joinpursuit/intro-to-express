@@ -3,7 +3,7 @@ const { response } = require("express");
 const express = require("express");
 const supertest = require("supertest")
 const app = express();
-const app2 = require("../app.js")
+const app2 = require("./app.js")
 
 // / DEPENDENCIES
 // const express = require('express')
@@ -15,7 +15,7 @@ const app2 = require("../app.js")
 
 // ROUTES
 app.get('/', (request, response) => {
-    response.send('Hello, world')
+    response.status(200).send('Hello, world')
 })
 
 // LISTEN
@@ -71,8 +71,6 @@ app.get("/magic8",(request,response) => {
       let phrase = magic8Responses[Math.floor(Math.random()*magic8Responses.length)];
     response.send(`<h1>${phrase}</h1>`)
 })
-
-
 
 
 // EXPORT
