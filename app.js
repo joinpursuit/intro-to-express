@@ -25,6 +25,7 @@ const magic8Responses = [
   "Outlook not so good",
   "Very doubtful",
 ];
+const terminatorResponses = ["I'll be back", "Hasta la vista, baby"];
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -44,7 +45,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/terminator", (req, res) => {
-  res.send("Make it work");
+  res.send(`<h1>${terminatorResponses[getRandomInt(2)]}</h1>`);
 });
 
 app.get("/HannibalSmith", (req, res) => {
