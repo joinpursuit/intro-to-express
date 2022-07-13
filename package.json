@@ -1,0 +1,24 @@
+{
+  "name": "intro-to-express",
+  "version": "1.0.0",
+  "description": "Intro to Express Lab",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HC-Guerrero/intro-to-express.git"
+  },
+  "author": "H.C.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HC-Guerrero/intro-to-express/issues"
+  },
+  "homepage": "https://github.com/HC-Guerrero/intro-to-express#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "jest": "^28.1.2",
+    "supertest": "^6.2.4"
+  }
+}
