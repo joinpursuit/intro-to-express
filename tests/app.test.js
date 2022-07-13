@@ -33,7 +33,7 @@ const randomPath = allPaths[Math.floor(Math.random() * allPaths.length)];
   })
 })
 
-describe("Test all paths", () => {
+describe("Test random path", () => {
   test("It should response the GET method for a random path", () => {
     return request(app)
       .get(randomPath)
