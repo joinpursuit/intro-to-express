@@ -72,3 +72,7 @@ const magic8Responses = [
     const magicResult = Math.floor(Math.random() * magic8Responses.length)
     res.send(<h1>`${magicResult}`</h1>)
   })
+
+  app.listen(port, () => {
+    console.log('Listening on port 3003!')
+  })
