@@ -4,7 +4,42 @@ const express = require("express");
 //CONFIG
 
 const app = express();
-const PORT = 3003;
+
+//ROUTES
+
+app.get("/", (request, response) => {
+  response.status(418).send("Hello, world!");
+});
+app.get("/batman", (req, res) => {
+  res.send("To the batmobile!");
+});
+
+app.get("/hannibal", (req, res) => {
+  res.send("it puts the lotion on the skin or else it gets the hose again");
+});
+
+app.get("/nightmareonelm", (req, res) => {
+  res.send("Welcome to Prime Time, $!@#*");
+});
+
+app.get("/chucky", (req, res) => {
+  res.send("Hi, Im chucky wanna play!");
+});
+app.get("/scarymovie", (req, res) => {
+  res.send("Waaaazaaaaaaaaaaaa");
+});
+
+app.get("/jaws", (req, res) => {
+  res.send("Youre gonna need a bigger boat");
+});
+
+app.get("/frankenstein", (req, res) => {
+  res.send("Its alive! its alive!!");
+});
+
+app.get("/dracula", (req, res) => {
+  res.send("I never drink..... Wine.");
+});
 
 const magic8Responses = [
   "It is certain",
@@ -30,55 +65,10 @@ const magic8Responses = [
 
 const random = magic8Responses[Math.floor(Math.random() * 19)];
 
-//ROUTES
-
-app.get("/", (req, res) => {
-  res.send("Hello, Pursuit");
-});
-
-app.get("/terminator", (req, res) => {
-  res.send("I'll be back");
-});
-
-app.get("/homer", (req, res) => {
-  res.send("Doh!");
-});
-
-app.get("/batman", (req, res) => {
-  res.send("To the batmobile!");
-});
-
-app.get("/hannibal", (req, res) => {
-  res.send("it puts the lotion on the skin or else it gets the hose again");
-});
-
-app.get("/nightmareonelm", (req, res) => {
-  res.send("Welcome to Prime Time, $!@#*");
-});
-
-app.get("/chucky", (req, res) => {
-  res.send("Hi, Im chucky wanna play!");
-});
-app.get("/scarymovie", (req, res) => {
-  res.send("Waaaazaaaaaaaaaaaa");
-});
-
-app.get("/jaws", (req, res) => {
-  res.send("Youre gonna needa  bigger boat");
-});
-
-app.get("/frankenstein", (req, res) => {
-  res.send("Its alive! its alive!!");
-});
-
-app.get("/dracula", (req, res) => {
-  res.send("I never drink..... Wine.");
-});
-
 app.get("/magic8", (req, res) => {
   res.send(`<h1>${random}</h1>`);
 });
 
-app.listen(PORT, () => {
-  console.log(`listening on port ${PORT}`);
-});
+//Export
+
+module.exports = app;
