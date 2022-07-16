@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
-const PORT = 3000;
+// const PORT = 3000;
 
 app.get("/", (req, res) => {
-  res.send("Hello, How are you!");
+  res.send("Hello, world!");
 });
 
 app.get("/terminator", (req, res) => {
@@ -78,6 +78,8 @@ app.get("/magic8", (req, res) => {
   res.send(`<h1>${magic8Responses[index]}<h1>`);
 });
 
-app.listen(PORT, () => {
-  console.log(`listening on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`listening on port ${PORT}`);
+// });
+
+module.exports = app;
