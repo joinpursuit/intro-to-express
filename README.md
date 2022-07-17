@@ -78,7 +78,12 @@ Test by going to http://localhost:3003/tim-gunn
 - What characters are allowed in a URL?
 - What happens if you try to create a URL `/tim gunn`
 - Is there a difference between `/timgunn` and `/TimGunn` and `/tim/gunn`?
+
+Capital Letter don't matter result is the same but the addition forward slash populates and error if app.get doesn't have that specified route.
+
 - If you have a phrase like `Here's looking at you, kid`, how do you deal with the `'` in `Here's`?
+
+Use Different Quotes so that there is a clear difference between the two.
 
 <hr />
 
@@ -124,11 +129,14 @@ app.get('terminator', (req, res) => {
   res.send('I\ll be back')
   res.send('Hasta la vista, baby')
 })
+
+Shows error within terminal and will not show the 
+//res.send('Hasta la vista, baby')
 ```
 
 What do you see in your browser?
  - Both messages?
- - One message (which one)
+ - One message (which one) The first in the send response and an error within the terminal
  - An error?
 
 Check terminal:
@@ -141,6 +149,7 @@ Check terminal:
 </details>
 
 What does this error message mean?
+Multiple responses are connected to one specified route.
 
 <details><summary>Hint/Reminder</summary>
 
